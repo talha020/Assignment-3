@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SettingsActivity"
+    android:layout_margin="10dp">
+    <RelativeLayout
+        android:id="@+id/settingsActivity_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/text_sharedValues"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select a color to set as background"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:textColor="@android:color/black"/>
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_sharedValues">
+            <RadioButton
+                android:id="@+id/yellow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="yellow"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"/>
+            <RadioButton
+                android:id="@+id/green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="green"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"/>
+            <RadioButton
+                android:id="@+id/blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="blue"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"/>
+        </RadioGroup>
+
+
+
+
+    </RelativeLayout>
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/settingsActivity_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginTop="120dp"
+        android:layout_below="@id/settingsActivity_relative"
+       android:textAlignment="viewStart">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"></View>
+
+            <Button
+                android:id="@+id/button_bottomSheet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="Tap to have bottom sheet"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="40dp"/>
+
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/settingsActivity_checkedTextview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hide/Unhide floating action"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:layout_marginBottom="8dp"/>
+
+
+
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/settingsActivity_bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:fitsSystemWindows="true"
+        android:background="@android:color/darker_gray"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="50dp" >
+        <TextView
+            android:id="@+id/text_bottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="sample bottom sheet"
+          />
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
+
